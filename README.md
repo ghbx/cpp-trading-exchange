@@ -23,3 +23,9 @@ exchange/
   market_data/    # market-data feed handler
 examples/    # standalone benchmarks and demos
 ```
+
+## Acknowledgements
+
+Built as part of the [Build Fellowship C++ Systems for Finance program](https://hub.buildfellowship.com/projects/c-systems-for-finance-build-a-trading-exchange-from-scratch-1).
+Initial starter files provided by [@victorsongyw](https://github.com/victorsongyw) in
+[cpp-trading-exchange-starter](https://github.com/victorsongyw/cpp-trading-exchange-starter).
