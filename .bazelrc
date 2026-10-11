@@ -1,11 +1,16 @@
 # C++ standard (applies to all targets)
 build --cxxopt=-std=c++26
 
+# Minimum macOS deployment target (14.0 = Sonoma). Recent Xcode's libc++ no
+# longer supports older targets — it emits warnings that -Werror escalates to
+# build errors. No-op on Linux, so safe to keep in the shared config.
+build --macos_minimum_os=14.0
+
 # Build verbosity
 build --verbose_failures
 build --announce_rc
 
-# Named configs — use with: bazel build -c dbg //...
+# Named configs — use with: bazel build --config=dbg //...
 build:dbg --cxxopt=-O0 --cxxopt=-g
 build:opt --cxxopt=-O2
 
